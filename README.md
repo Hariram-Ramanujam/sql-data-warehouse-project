@@ -1,56 +1,82 @@
-# sql-data-warehouse-project
+# SQL Data Warehouse Project
 
-🏗️ **Data Architecture**
+## 🏗️ Data Architecture
 
-The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold layers: Data Architecture
+This project follows the **Medallion Architecture**, consisting of three layers: Bronze, Silver, and Gold. Each layer represents a different stage of data processing, from raw data ingestion to business-ready analytical datasets.
 
-1.**Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
+### Medallion Architecture
 
-2.**Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
+| Layer | Description |
+|---|---|
+| **Bronze** | Stores raw data exactly as received from source systems. Data is ingested from ERP and CRM CSV files into SQL Server. |
+| **Silver** | Performs data cleansing, standardization, validation, and transformation to ensure data quality and consistency. |
+| **Gold** | Contains business-ready data modeled using a Star Schema, consisting of fact and dimension tables for reporting and analytics. |
 
-3.**Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+## 📖 Project Overview
 
-📖 **Project Overview**
+This project focuses on designing and implementing a modern data warehouse using SQL Server to consolidate sales data from multiple source systems.
 
-In this project, you:
+The project covers the following activities:
 
-Design the architecture: a modern data warehouse with three layers, bronze, silver and gold.
-Build the ETL pipelines: load the source files and move the data through the layers.
-Model the data: facts and dimensions, ready for reports.
-Analyze it: answer business questions with SQL.
+1. **Data Architecture:** Design a modern data warehouse using the Bronze, Silver, and Gold layers.
+2. **ETL Pipelines:** Build ETL processes to extract, transform, and load data from source CSV files into the warehouse.
+3. **Data Modeling:** Develop fact and dimension tables using a Star Schema for analytical reporting.
+4. **Data Analysis:** Write SQL queries to answer business questions and generate meaningful insights.
 
+## 🛠️ Tools & Technologies
 
-🛠️** Important Links & Tools**
+| Tool | Purpose |
+|---|---|
+| **SQL Server** | Database management and data warehouse implementation |
+| **SQL Server Management Studio (SSMS)** | Database development and query execution |
+| **Git & GitHub** | Version control and project documentation |
+| **Draw.io** | Data architecture and data model visualization |
+| **Notion** | Project planning, task tracking, and documentation |
 
-SQL Server and SSMS: the setup guide in 00_setup has the links and every step.
-Git: a GitHub account, to save and share your project.
-draw.io: to draw the architecture and the data model.
-Notion template: the project plan, ready to copy.
-Notion project steps: every phase and task of the project.
+### Important Links & Resources
 
+- **SQL Server & SSMS:** Refer to the setup guide in the `00_setup` directory for installation instructions.
+- **GitHub:** For version control and project sharing.
+- **Draw.io:** For designing data architecture and data models.
+- **Notion Template:** Project planning and task management.
+- **Notion Project Steps:** Detailed guidance for each project phase.
 
-🚀** Project Requirements**
+## 🚀 Project Requirements
 
-Building the Data Warehouse (Data Engineering)
-Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+### 1. Data Warehouse Development (Data Engineering)
 
-**Specifications**
+**Objective:**
 
-Data Sources: Import data from two source systems (ERP and CRM) provided as CSV files.
-Data Quality: Cleanse and resolve data quality issues prior to analysis.
-Integration: Combine both sources into a single, user-friendly data model designed for analytical queries.
-Scope: Focus on the latest dataset only; historization of data is not required.
-Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+Develop a modern data warehouse using SQL Server to consolidate sales data from ERP and CRM source systems, enabling analytical reporting and informed business decisions.
 
-**BI: Analytics & Reporting (Data Analysis)**
+**Specifications:**
 
-**Objective**
-Develop SQL-based analytics to deliver detailed insights into:
+- **Data Sources:** Import data from two source systems (ERP and CRM) provided as CSV files.
+- **Data Quality:** Identify, cleanse, and resolve data quality issues before loading data into the analytical layer.
+- **Data Integration:** Integrate data from both source systems into a unified, user-friendly data model optimized for analytical queries.
+- **Scope:** Focus exclusively on the latest available dataset. Historical data tracking and historization are not required.
+- **Documentation:** Provide clear documentation of the data architecture, data model, and transformation processes to support business stakeholders and analytics teams.
 
-Customer Behavior
-Product Performance
-Sales Trends
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+### 2. BI: Analytics & Reporting (Data Analysis)
 
-For more details, refer to 02_docs/requirements.md.
+**Objective:**
+
+Develop SQL-based analytics to generate actionable business insights and support strategic decision-making.
+
+**Key Analysis Areas:**
+
+- **Customer Behavior:** Analyze customer demographics, purchasing patterns, and customer activity.
+- **Product Performance:** Evaluate product sales, product categories, and revenue contribution.
+- **Sales Trends:** Identify sales patterns, monitor revenue, and analyze business performance over time.
+
+These analyses will help stakeholders understand business performance and make data-driven decisions.
+
+## 📂 Project Documentation
+
+For detailed project specifications, requirements, and implementation steps, refer to:
+
+- [`02_docs/requirements.md`](02_docs/requirements.md)
+
+---
+
+**Project Focus:** SQL Server | Data Engineering | Data Warehousing | ETL | Star Schema | SQL Analytics
