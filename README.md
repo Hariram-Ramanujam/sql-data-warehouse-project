@@ -1,6 +1,6 @@
 # sql-data-warehouse-project
 
-🏗️** Data Architecture**
+🏗️ #Data Architecture
 
 The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold layers: Data Architecture
 
